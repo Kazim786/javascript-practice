@@ -6,6 +6,7 @@ var usersList = [
       password: 456789
     
 }];
+//adding to the object that is inside of a list
 usersList[0].name = "Kazim";
 // output: 
 "Kazim"
@@ -16,6 +17,7 @@ var listInObj = {
 };
 // output: 
 undefined
+//making changes to a list thats inside of an object
 listInObj.myInfo[0] = "sssn";
 //output: 
 "sssn"
@@ -25,3 +27,16 @@ listInObj.myInfo.push("family");
 4
 listInObj
 {myInfo: Array(4)}myInfo: (4) ["sssn", "age", "hobbies", "family"]__proto__: Object
+
+//function inside of an object
+
+user.shouts = function(){
+    console.log("AHHHHH");
+}
+ƒ (){
+    console.log("AHHHHH");
+}
+user
+{name: "John", age: 34, hobby: "mma", favoriteFood: "Biryani", shouts: ƒ}
+user.shouts()
+AHHHHH

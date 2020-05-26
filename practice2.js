@@ -79,3 +79,17 @@ var todos = [
 
 // }while(counterTwo > 0)
 
+
+//comparing for loop with forEach
+var todosLength = todos.length;
+for(var i=0; i < todosLength; i++ ){
+    console.log(i)
+}
+
+
+//for each loop
+// todos.forEach(function(i) {
+//     console.log(i)
+// })
+    
+

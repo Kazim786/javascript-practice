@@ -137,6 +137,8 @@ var newsfeed = [
 var usernamePrompt = prompt("enter username")
 var passPrompt = prompt("enter password")
 
+
+//To see if the user is valid
 function isUserValid (user, pass){
     for(var i = 0; i < database.length; i++){
         if(user === database[i].username && 
@@ -147,6 +149,7 @@ function isUserValid (user, pass){
     return false;
 }
 
+//once the isUserValid function verifies the user this function takes the result of isUserValid function and then determines if they can see the newsfeed
 function authentify(user, pass){
 if(isUserValid(user, pass)){
     console.log(newsfeed)
@@ -159,4 +162,4 @@ if(isUserValid(user, pass)){
 
 authentify(usernamePrompt, passPrompt);
 
-// database.forEach(authentify)
+

@@ -52,7 +52,7 @@ function leetspeak(string){
         // return string
     }
     else if(string.includes("O")){
-        string = string.replace("o", "0")
+        string = string.replace("O", "0")
         // return string
     }
     else if(string.includes("S")){

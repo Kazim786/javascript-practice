@@ -6,19 +6,27 @@
 // var database = [{
 //     username: "Kazim",
 //     password: "123456"
-// }];
+// }, {username: "andy33",
+//     timeline: "sdfsdf"
+    // },
+    // {username: "anne32",
+    // timeline: "asdf"
+    // },
+    // {username: "amanda34",
+    // timeline: "asds"
+    // }];
 
 // var database = [userInfo]
 // var newsfeed = [
-//     {username: "andy33",
-//     timeline: "sdfsdf"
-//     },
-//     {username: "anne32",
-//     timeline: "asdf"
-//     },
-//     {username: "amanda34",
-//     timeline: "asds"
-//     }
+    // {username: "andy33",
+    // timeline: "sdfsdf"
+    // },
+    // {username: "anne32",
+    // timeline: "asdf"
+    // },
+    // {username: "amanda34",
+    // timeline: "asds"
+    // }
 // ]
 
 // var usernamePrompt = prompt("enter username")
@@ -39,13 +47,13 @@
 
 //Loop practice
 
-var todos = [
-    "clean room",
-    "brush",
-    "exercise",
-    "study",
-    "eat"
-];
+// var todos = [
+//     "clean room",
+//     "brush",
+//     "exercise",
+//     "study",
+//     "eat"
+// ];
 
 // for (var i = 0; i < todos.length; i++) {
 //     // todos[i] = todos[i] + "!"; adds ! after every activity
@@ -81,10 +89,10 @@ var todos = [
 
 
 //comparing for loop with forEach
-var todosLength = todos.length;
-for(var i=0; i < todosLength; i++ ){
-    console.log(i)
-}
+// var todosLength = todos.length;
+// for(var i=0; i < todosLength; i++ ){
+//     console.log(i)
+// }
 
 
 //for each loop
@@ -93,3 +101,62 @@ for(var i=0; i < todosLength; i++ ){
 // })
     
 
+// *******************
+
+//facebook clone with loops
+
+
+var database = [
+    {
+    username: "Kazim",
+    password: "123456"
+    }, 
+    {username: "andy33",
+    password: "7777"
+    },
+    {username: "anne32",
+    password: "8989"
+    },
+    {username: "amanda34",
+    password: "4555"
+    }];
+
+
+var newsfeed = [
+    {username: "andy33",
+    timeline: "sdfsdf"
+    },
+    {username: "anne32",
+    timeline: "asdf"
+    },
+    {username: "amanda34",
+    timeline: "asds"
+    }
+]
+
+var usernamePrompt = prompt("enter username")
+var passPrompt = prompt("enter password")
+
+function isUserValid (user, pass){
+    for(var i = 0; i < database.length; i++){
+        if(user === database[i].username && 
+            pass === database[i].password){
+            return true;
+        } 
+    }
+    return false;
+}
+
+function authentify(user, pass){
+if(isUserValid(user, pass)){
+    console.log(newsfeed)
+}
+    else{
+        alert("try again :/")
+    }
+
+}
+
+authentify(usernamePrompt, passPrompt);
+
+// database.forEach(authentify)
